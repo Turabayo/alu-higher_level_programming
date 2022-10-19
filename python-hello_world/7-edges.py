@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-word="Holberton"
+word = "Holberton"
 First_3_letters = word[:3]
 Last_2_letters = word[-2:]
 Middle_word = word[1:-1]
