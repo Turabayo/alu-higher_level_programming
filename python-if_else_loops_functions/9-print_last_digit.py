@@ -13,12 +13,3 @@ def print_last_digit(number):
     else:
         print(f"{number:}", end="")
         return (number)
-
-
-'''
-This function can also be used
-
-def print_last_digit(number):
-    print(f"{abs(number) % 10}", end="")
-    return (abs(number) % 10)
-''
