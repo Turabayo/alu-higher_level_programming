@@ -12,7 +12,7 @@ def print_last_digit(number):
         return ((-number % 10))
     else:
         print(f"{number:}", end="")
-        return (number)i
+        return (number)
 
 
 '''
