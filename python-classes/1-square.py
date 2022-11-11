@@ -1,12 +1,12 @@
 #!/usr/bin/python3
- #class 'Square' that defines a square by:
- #(based on 0-square.py)
+# class 'Square' that defines a square by:
+# (based on 0-square.py)
 """
    define a class 'square'
 """
 
 
-class square:
+class Square:
         """
         square with private instance attribute:'size'
         """
