@@ -2,7 +2,6 @@
 """Defines a base geometry class BaseGeometry."""
 
 
-
 class BaseGeometry:
     """Reprsent base geometry."""
 
