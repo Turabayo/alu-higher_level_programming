@@ -13,8 +13,8 @@ class Student:
             """retrieves dictionary representation"""
             json = dict(vars(self))
             if type(attributes) == list:
-               for j in list(json):
-                   if j not in attributes:
-                       json.pop(j, None)
+                for j in list(json):
+                    if j not in attributes:
+                        json.pop(j, None)
             return json
             return vars(self)
