@@ -1,3 +1,3 @@
 #!/bin/bash
 # curl sends GET req to URL, displays response body
-curl -sH "X-School-User-Id: 98" "$1"
+curl -s -X POST -d "email=test@gmail.com&subject=I will always be here for PLD" "$1"
