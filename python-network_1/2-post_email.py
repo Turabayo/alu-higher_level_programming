@@ -1,8 +1,6 @@
 #!/usr/bin/python3
+"""Module 1-hbtn_header.py
 """
-Module 1-hbtn_header.py
-"""
-
 
 import urllib.request
 from sys import argv
