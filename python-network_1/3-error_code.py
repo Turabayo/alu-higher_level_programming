@@ -1,20 +1,19 @@
 #!/usr/bin/python3
-"""
-Module 2-post_email.py
-"""
+"""sends a request to the URL and displays the body"""
 
-
-import urllib.parse
 import urllib.request
-from sys import argv
+import urllib.error
+import sys
 
-
-if __name__ == "__main__":
-    url = argv[1]
-    value = {"email": argv[2]}
-    data = urllib.parse.urlencode(value)
-    data = data.encode('ascii')
-    req = urllib.request.Request(url, data)
-    with urllib.request.urlopen(req) as response:
-        page = response.read().decode('utf-8')
-        print(page)
+if __name__ == '__main__':
+    """"sends request"""
+    url = sys.argv[1]
+    req = urllib.request.Request(url)
+    try:
+        with urllib.request.urlopen(req) as reply:
+            data = reply.read()
+            print("{}".format(data.decode("utf-8")))
+    except urllib.error.HTTPError as err:
+        print("Error code: {}".format(err.code))
+    except urllib.error.URLError as errr:
+        print(errr.reason)
