@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-     """a python script that fetches"""
+ """a python script that fetches"""
 
  import requests
 
