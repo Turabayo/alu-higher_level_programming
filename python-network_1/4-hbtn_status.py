@@ -1,11 +1,10 @@
 #!/usr/bin/python3
- """a python script that fetches"""
+"""script that fetches intranet status"""
 
- import requests
+import requests
 
-
- if __name__ == "__main__":
-     reply = requests.get("https://intranet.hbtn.io/status")
-     print("Body response:")
-     print("\t- type: {}".format(type(reply.text)))
-     print("\t- content: {}".format(reply.text))
+if __name__ == "__main__":
+    response = requests.get("https://intranet.hbtn.io/status")
+    print("Body response:")
+    print("\t- type: {}".format(type(response.text)))
+    print("\t- content: {}".format(response.text))
