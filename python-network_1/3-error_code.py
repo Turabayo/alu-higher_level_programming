@@ -1,19 +1,21 @@
 #!/usr/bin/python3
-"""sends a request to the URL and displays the body"""
-
-import urllib.request
-import urllib.error
+# python script that takes in a URL,
+# sends a request to the URL and displays the body of the response
+# (decoded in utf-8)
+"""
+    send a request to the URL & display body of the response
+"""
 import sys
+import urllib.error
+import urllib.request
 
-if __name__ == '__main__':
-    """"sends request"""
+
+if __name__ == "__main__":
     url = sys.argv[1]
-    req = urllib.request.Request(url)
+
+    request = urllib.request.Request(url)
     try:
-        with urllib.request.urlopen(req) as reply:
-            data = reply.read()
-            print("{}".format(data.decode("utf-8")))
-    except urllib.error.HTTPError as err:
-        print("Error code: {}".format(err.code))
-    except urllib.error.URLError as errr:
-        print(errr.reason)
+        with urllib.request.urlopen(request) as response:
+            print(response.read().decode("ascii"))
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))
