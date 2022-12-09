@@ -1,6 +1,4 @@
 WHAT IS IT ABOUT
-<<<<<<< HEAD
-
 ================
 
 
@@ -125,7 +123,7 @@ If DIV is not an int or a float
 	...	[2, 3, 4]
 	... ]
 
-	>>> print(matrix_divided(matrix, 'nono_num'))
+	>>> print(matrix_divided(matrix, 'non_num'))
 	Traceback (most recent call last):
 	TypeError: div must be a number
 
@@ -140,34 +138,4 @@ If div == 0, a ZeroDivisionError will be encountered
 	... ]
 
 	>>> print(matrix_divided(matrix, 0))
-	Traceback (most recent call last):
 	ZeroDivisionError: division by zero
-=======
-================
-
-This is a function that will divided all elements of a matrix by a div number which we will pass
-into our function
-
-HOW IT WORKS
-============
-
-We will pass a matrix that we want to get its elemets divided and a div which is a divisor
-that we want our elements to be divided by
-
-::
-
-	>>>#!/usr/bin/python3
-
-matrix_divided = __import__('2-matrix_divided').matrix_divided
-
-
-
-matrix = [
-	 [1, 2, 3],
-	 [4, 5, 6]
-]
-
-print(matrix_divided(matrix, 3))
-
-print(matrix)
->>>>>>> 29f2db1852af5188ec2caa7537a99018424394aa
