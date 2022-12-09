@@ -75,7 +75,7 @@ An empty list will give an error
 
 	>>> matrix = []
 	print(matrix_divided(matrix, 3))
-	TRaceback (most recent call last):
+	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 If a matrix is a list of empty list, it will work
