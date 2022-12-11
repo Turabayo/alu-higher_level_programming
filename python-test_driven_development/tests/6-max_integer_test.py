@@ -2,7 +2,7 @@
 
 """
 
-    unit tests
+    unittests
 
 """
 
@@ -24,7 +24,7 @@ class TestMaxInteger(unittest.TestCase):
 
     """
 
-        Function documentation
+        Unittest Function
 
     """
 
@@ -34,11 +34,11 @@ class TestMaxInteger(unittest.TestCase):
 
         """
 
-            Function documentation
+             Unittest Function
 
         """
 
-        self.assertEqual(max_integer([1, 2, 3]), 3)
+        self.assertEqual(max_integer([3, 5, 7]), 7)
 
 
 
