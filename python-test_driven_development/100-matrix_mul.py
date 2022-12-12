@@ -2,7 +2,7 @@
 
 """
 
-    Create 'matrix_mul' function.
+    Definition of matrix function.
 
 """
 
@@ -86,15 +86,15 @@ def matrix_mul(m_a, m_b):
 
 
 
-    if not all((isinstance(ele, int) or isinstance(ele, float))
+    if not all((isinstance(element, int) or isinstance(element, float))
 
-               for ele in [num for row in m_a for num in row]):
+               for element in [num for row in m_a for num in row]):
 
         raise TypeError("m_a should contain only integers or floats")
 
-    if not all((isinstance(ele, int) or isinstance(ele, float))
+    if not all((isinstance(element, int) or isinstance(element, float))
 
-               for ele in [num for row in m_b for num in row]):
+               for element in [num for row in m_b for num in row]):
 
         raise TypeError("m_b should contain only integers or floats")
 
@@ -130,7 +130,7 @@ def matrix_mul(m_a, m_b):
 
 
 
-    new_matrix = []
+    n_matrix = []
 
     for row in m_a:
 
@@ -146,6 +146,6 @@ def matrix_mul(m_a, m_b):
 
             new_row.append(prod)
 
-        new_matrix.append(new_row)
+        n_matrix.append(new_row)
 
-    return new_matrix
+    return n_matrix
