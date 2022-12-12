@@ -1,47 +1,45 @@
-	>>> text_indentation = __import__('5-text_indentation').text_indentation
-
-::	
-
-	>>> text_indentation(6)
-
-	Traceback(most recent call last):
-
-	TypeError: Text must be a string
-
-::
-
-	>>> text_indentation("Director. James")
-
-	Director
-
-	<BLANKLINE>
-
-	James
-
-::
-
-	>>> text_indentation()
-
-	Traceback(most recent call last)
-
-	TypeError: text_identation() missing 1 required positional argument: 'text'
-
-::
-
-	>>> text_indentation("God. is good! all the time:glory")
-
-	God.
-
-	<BLANKLINE>
-
-	is good!
-
-	<BLANKLINE>
-
-	all the time
-
-	<BLANKLINE>
-
-	Glory
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
 
+
+>>> text_indentation()
+
+Traceback (most recent call last):
+
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+
+>>> text_indentation("Technical. School? How are you: Imma")
+
+Technical.
+
+<BLANKLINE>
+
+School?
+
+<BLANKLINE>
+
+How are you:
+
+<BLANKLINE>
+
+Imma
+
+
+
+>>> text_indentation(2)
+
+Traceback (most recent call last):
+
+TypeError: text must be a string
+
+
+
+>>> text_indentation("Aptech. School")
+
+Aptech.
+
+<BLANKLINE>
+
+School
