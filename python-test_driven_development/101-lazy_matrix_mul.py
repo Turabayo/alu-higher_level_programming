@@ -9,7 +9,6 @@
 import numpy as NumPy
 
 
-
 def lazy_matrix_mul(m_a, m_b):
     """
         Write a function that multiplies 2 matrices by using

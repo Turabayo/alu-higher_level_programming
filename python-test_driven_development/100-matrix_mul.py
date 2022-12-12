@@ -130,7 +130,7 @@ def matrix_mul(m_a, m_b):
 
 
 
-    n_matrix = []
+    new_matrix = []
 
     for row in m_a:
 
@@ -146,6 +146,6 @@ def matrix_mul(m_a, m_b):
 
             new_row.append(prod)
 
-        n_matrix.append(new_row)
+        new_matrix.append(new_row)
 
-    return n_matrix
+    return new_matrix
