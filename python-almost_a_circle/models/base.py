@@ -213,4 +213,4 @@ class Base:
                     turtle.forward(square.py)
                     turtle.right(90)
 
-                turtle.getscreen().root.mainloop()           
+                turtle.getscreen().root.mainloop()
