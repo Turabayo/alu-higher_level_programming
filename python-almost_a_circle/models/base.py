@@ -19,7 +19,6 @@ class Base:
             self.id = self.__nb_objects
         else:
             self.id = id
-    
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of a list of dictionaries"""
@@ -37,7 +36,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
-        filename = cls.__name__+ ".json"
+        filename = cls.__name__ + ".json"
         lo = []
         if list_objs is not None:
             for i in list_objs:
@@ -57,7 +56,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        filename = cls.__name__+ ".json"
+        filename = cls.__name__ + ".json"
         l = []
         try:
             with open(filename, 'r') as f:
@@ -71,8 +70,8 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """serializes a list of Rectangles/squares in csv"""
-        filename = cls.__name__+ ".csv"
-        with open(filename, 'w', newline ='') as csvfile:
+        filename = cls.__name__ + ".csv"
+        with open(filename,'w',newline ='') as csvfile:
             csv_writer = csv.writer(csvfile)
             if cls.__name__ is "Recxtangle":
                 for obj in list_objs:
@@ -108,7 +107,7 @@ class Base:
         row_width = padding
         row_height = 0
         screen_height = padding
-        color_list = ['red','orange','yellow','green','Blue','Indigo', 'violet']
+        color_list = ['red', 'orange', 'yellow', 'green', 'Blue', 'Indigo', 'violet']
         color_size = len(color_list)
         color_index = 0
         for rect in list_rectangles:
@@ -142,7 +141,7 @@ class Base:
             row_width = padding
             row_height = 0
             for rect in list_rectangles:
-                potential_width = row_width + rect.width +rect.x + padding
+                potential_width = row_width + rect.width + rect.x + padding
                 if (row_width == padding or potential_width < screen_width):
                     row_width += rect.width + rect.x + padding
                     if(row_height < rect.height + rect.y):
@@ -214,7 +213,4 @@ class Base:
                     turtle.forward(square.py)
                     turtle.right(90)
 
-                turtle.getscreen().root.mainloop()
-
-
-            
+                turtle.getscreen().root.mainloop()           
