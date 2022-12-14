@@ -19,6 +19,7 @@ class Base:
             self.id = self.__nb_objects
         else:
             self.id = id
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of a list of dictionaries"""
@@ -48,9 +49,9 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
         if cls.__name__ is "Rectangle":
-            dummy = cls(1,1)
+            dummy = cls(1, 1)
         elif cls.__name__ is "square":
-             dummy = cls(1)
+            dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
 
@@ -71,11 +72,12 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """serializes a list of Rectangles/squares in csv"""
         filename = cls.__name__ + ".csv"
-        with open(filename,'w',newline ='') as csvfile:
+        with open(filename, 'w', newline='') as csvfile:
             csv_writer = csv.writer(csvfile)
             if cls.__name__ is "Recxtangle":
                 for obj in list_objs:
-                    csv_writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                    csv_writer.writerow([obj.id, obj.width, obj.height,
+                     obj.x, obj.y])
             elif cls.__name__ is "square":
                 for obj in list_objs:
                     csv_writer.writerow([obj.id, obj.size, obj.x, obj.y])
@@ -90,9 +92,14 @@ class Base:
                 csv_reader = csv.reader(csvfile)
                 for args in csv_reader:
                     if cls.__name__ is "Rectangle":
-                        dictionary = {"id": int(args[0]), "width": int(args[1]), "height": int(args[2]), "x": int(args[3]), "y": int(args[4])}
+                        dictionary = {"id": int(args[0]),
+                                     "width": int(args[1]),
+                                     "height": int(args[2]),
+                                     "x": int(args[3]),
+                                     "y": int(args[4])}
                     elif cls.__name__ is "square":
-                        dictionary = {"id": int(args[0]), "size": int(args[1]), "x": int(args[2]), "y": int(args[3])}
+                        dictionary = {"id": int(args[0]), "size": int(args[1]),
+                                     "x": int(args[2]), "y": int(args[3])}
                     obj = cls.create(**dictionary)
                     l.append(obj)
         except:
@@ -107,7 +114,8 @@ class Base:
         row_width = padding
         row_height = 0
         screen_height = padding
-        color_list = ['red', 'orange', 'yellow', 'green', 'Blue', 'Indigo', 'violet']
+        color_list = ['red', 'orange', 'yellow', 'green', 'Blue', 'Indigo',
+         'violet']
         color_size = len(color_list)
         color_index = 0
         for rect in list_rectangles:
