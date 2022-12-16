@@ -18,3 +18,4 @@ if __name__ == "__main__":
     print(", ".join(city[0] for city in rows))
     cursor.close()
     db.close()
+    

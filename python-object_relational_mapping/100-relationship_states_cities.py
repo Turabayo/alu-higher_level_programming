@@ -23,3 +23,4 @@ if __name__ == "__main__":
     session.add(cali)
     session.commit()
     session.close()
+    
