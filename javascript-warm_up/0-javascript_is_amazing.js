@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-VimCrypt~03!$Š•3 €¾múè ƒ 9dY)À9ç”!:mÿeóÑ|÷!†u²l,
-Ã>z Ï#	sÃ°°?¸Àÿ÷ç/€^¡hğqÂ\ú“¸S#É%Ş
-=======
 #!/usr/bin/node
 const myVar = 'JavaScript is amazing';
 console.log(myVar);
