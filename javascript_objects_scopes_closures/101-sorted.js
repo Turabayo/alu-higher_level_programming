@@ -1,12 +1,10 @@
 #!/usr/bin/node
-const dict = require('./101-data.js').dict;
-const result = {};
-
-for (const prop in dict) {
-  if (!Object.prototype.hasOwnProperty.call(result, dict[prop])) {
-    result[dict[prop]] = [prop];
-  } else {
-    result[dict[prop]].push(prop);
+const dict = require('./101-data').dict;
+const n = {};
+for (const i in dict) {
+  if (n[dict[i]] === undefined) {
+    n[dict[i]] = [];
   }
+  n[dict[i]].push(i);
 }
-console.log(result);
+console.log(n);
